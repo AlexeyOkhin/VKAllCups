@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		0C5C2FBF293B506C001A12B3 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5C2FBE293B506C001A12B3 /* FavoritesViewController.swift */; };
+		0C5C2FC6293B54B6001A12B3 /* UIButton + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5C2FC5293B54B6001A12B3 /* UIButton + Extension.swift */; };
+		0C5C2FC8293B550B001A12B3 /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5C2FC7293B550B001A12B3 /* UIColor + Extension.swift */; };
+		0C5C2FCB293B5898001A12B3 /* UIFavoritesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5C2FCA293B5898001A12B3 /* UIFavoritesCollectionViewController.swift */; };
+		0C5C2FCD293B6450001A12B3 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5C2FCC293B6450001A12B3 /* HeaderView.swift */; };
+		0C5C2FCF293B6576001A12B3 /* UILabel + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5C2FCE293B6576001A12B3 /* UILabel + Extension.swift */; };
+		0C5C2FD1293B65AE001A12B3 /* UIFont + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5C2FD0293B65AE001A12B3 /* UIFont + Extension.swift */; };
+		0C5C2FD7293CC155001A12B3 /* ThemesDzen.json in Resources */ = {isa = PBXBuildFile; fileRef = 0C5C2FD6293CC155001A12B3 /* ThemesDzen.json */; };
+		0C5C2FD9293CC360001A12B3 /* Bundle + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5C2FD8293CC360001A12B3 /* Bundle + Extension.swift */; };
+		0C5C2FDC293CC3B6001A12B3 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5C2FDB293CC3B6001A12B3 /* Theme.swift */; };
 		0C74FDE6293B3A2F00F5BAC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C74FDE5293B3A2F00F5BAC5 /* AppDelegate.swift */; };
 		0C74FDEF293B3A3200F5BAC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C74FDEE293B3A3200F5BAC5 /* Assets.xcassets */; };
 		0C74FDF2293B3A3200F5BAC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C74FDF0293B3A3200F5BAC5 /* LaunchScreen.storyboard */; };
@@ -15,6 +24,15 @@
 
 /* Begin PBXFileReference section */
 		0C5C2FBE293B506C001A12B3 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		0C5C2FC5293B54B6001A12B3 /* UIButton + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton + Extension.swift"; sourceTree = "<group>"; };
+		0C5C2FC7293B550B001A12B3 /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
+		0C5C2FCA293B5898001A12B3 /* UIFavoritesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFavoritesCollectionViewController.swift; sourceTree = "<group>"; };
+		0C5C2FCC293B6450001A12B3 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		0C5C2FCE293B6576001A12B3 /* UILabel + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extension.swift"; sourceTree = "<group>"; };
+		0C5C2FD0293B65AE001A12B3 /* UIFont + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + Extension.swift"; sourceTree = "<group>"; };
+		0C5C2FD6293CC155001A12B3 /* ThemesDzen.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ThemesDzen.json; sourceTree = "<group>"; };
+		0C5C2FD8293CC360001A12B3 /* Bundle + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle + Extension.swift"; sourceTree = "<group>"; };
+		0C5C2FDB293CC3B6001A12B3 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		0C74FDE2293B3A2F00F5BAC5 /* VKAllCups.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKAllCups.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C74FDE5293B3A2F00F5BAC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C74FDEE293B3A3200F5BAC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -33,6 +51,64 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C5C2FC0293B5317001A12B3 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				0C74FDE5293B3A2F00F5BAC5 /* AppDelegate.swift */,
+				0C74FDEE293B3A3200F5BAC5 /* Assets.xcassets */,
+				0C74FDF0293B3A3200F5BAC5 /* LaunchScreen.storyboard */,
+				0C74FDF3293B3A3200F5BAC5 /* Info.plist */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		0C5C2FC1293B5349001A12B3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0C5C2FC5293B54B6001A12B3 /* UIButton + Extension.swift */,
+				0C5C2FC7293B550B001A12B3 /* UIColor + Extension.swift */,
+				0C5C2FCE293B6576001A12B3 /* UILabel + Extension.swift */,
+				0C5C2FD0293B65AE001A12B3 /* UIFont + Extension.swift */,
+				0C5C2FD8293CC360001A12B3 /* Bundle + Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0C5C2FC2293B5357001A12B3 /* MainFlow */ = {
+			isa = PBXGroup;
+			children = (
+				0C5C2FC4293B53BC001A12B3 /* Elements */,
+				0C5C2FC3293B538B001A12B3 /* FavoritesThemesModule */,
+			);
+			path = MainFlow;
+			sourceTree = "<group>";
+		};
+		0C5C2FC3293B538B001A12B3 /* FavoritesThemesModule */ = {
+			isa = PBXGroup;
+			children = (
+				0C5C2FDA293CC39A001A12B3 /* Model */,
+				0C5C2FBE293B506C001A12B3 /* FavoritesViewController.swift */,
+				0C5C2FCA293B5898001A12B3 /* UIFavoritesCollectionViewController.swift */,
+			);
+			path = FavoritesThemesModule;
+			sourceTree = "<group>";
+		};
+		0C5C2FC4293B53BC001A12B3 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				0C5C2FCC293B6450001A12B3 /* HeaderView.swift */,
+			);
+			path = Elements;
+			sourceTree = "<group>";
+		};
+		0C5C2FDA293CC39A001A12B3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0C5C2FDB293CC3B6001A12B3 /* Theme.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		0C74FDD9293B3A2E00F5BAC5 = {
 			isa = PBXGroup;
 			children = (
@@ -52,11 +128,10 @@
 		0C74FDE4293B3A2F00F5BAC5 /* VKAllCups */ = {
 			isa = PBXGroup;
 			children = (
-				0C74FDE5293B3A2F00F5BAC5 /* AppDelegate.swift */,
-				0C5C2FBE293B506C001A12B3 /* FavoritesViewController.swift */,
-				0C74FDEE293B3A3200F5BAC5 /* Assets.xcassets */,
-				0C74FDF0293B3A3200F5BAC5 /* LaunchScreen.storyboard */,
-				0C74FDF3293B3A3200F5BAC5 /* Info.plist */,
+				0C5C2FD6293CC155001A12B3 /* ThemesDzen.json */,
+				0C5C2FC0293B5317001A12B3 /* Application */,
+				0C5C2FC2293B5357001A12B3 /* MainFlow */,
+				0C5C2FC1293B5349001A12B3 /* Extensions */,
 			);
 			path = VKAllCups;
 			sourceTree = "<group>";
@@ -119,6 +194,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C5C2FD7293CC155001A12B3 /* ThemesDzen.json in Resources */,
 				0C74FDF2293B3A3200F5BAC5 /* LaunchScreen.storyboard in Resources */,
 				0C74FDEF293B3A3200F5BAC5 /* Assets.xcassets in Resources */,
 			);
@@ -131,8 +207,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C5C2FD1293B65AE001A12B3 /* UIFont + Extension.swift in Sources */,
 				0C5C2FBF293B506C001A12B3 /* FavoritesViewController.swift in Sources */,
+				0C5C2FCD293B6450001A12B3 /* HeaderView.swift in Sources */,
+				0C5C2FC8293B550B001A12B3 /* UIColor + Extension.swift in Sources */,
+				0C5C2FCF293B6576001A12B3 /* UILabel + Extension.swift in Sources */,
+				0C5C2FD9293CC360001A12B3 /* Bundle + Extension.swift in Sources */,
+				0C5C2FCB293B5898001A12B3 /* UIFavoritesCollectionViewController.swift in Sources */,
+				0C5C2FDC293CC3B6001A12B3 /* Theme.swift in Sources */,
 				0C74FDE6293B3A2F00F5BAC5 /* AppDelegate.swift in Sources */,
+				0C5C2FC6293B54B6001A12B3 /* UIButton + Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +357,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = W856DM7S8L;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = VKAllCups/Info.plist;
+				INFOPLIST_FILE = VKAllCups/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -305,7 +389,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = W856DM7S8L;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = VKAllCups/Info.plist;
+				INFOPLIST_FILE = VKAllCups/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";

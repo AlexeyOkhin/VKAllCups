@@ -1,0 +1,54 @@
+[
+    {
+        "themeName": "Юмор",
+        "rating": 10
+    },
+    {
+        "themeName": "Новости",
+        "rating": 9
+    },
+    {
+        "themeName": "Политика",
+        "rating": 8
+    },
+    {
+        "themeName": "Образование",
+        "rating": 5
+    },
+    {
+        "themeName": "Программирование",
+        "rating": 7
+    },
+    {
+        "themeName": "Автомобили",
+        "rating": 4
+    },
+    {
+        "themeName": "Ремонт",
+        "rating": 12
+    },
+    {
+        "themeName": "Путешествия",
+        "rating": 14
+    },
+    {
+        "themeName": "Отдых",
+        "rating": 23
+    },
+    {
+        "themeName": "Спорт",
+        "rating": 34
+    },
+    {
+        "themeName": "Сериалы",
+        "rating": 1
+    },
+    {
+        "themeName": "Комедии",
+        "rating": 15
+    },
+    {
+        "themeName": "Радиоэлектронника",
+        "rating": 3
+    }
+]
