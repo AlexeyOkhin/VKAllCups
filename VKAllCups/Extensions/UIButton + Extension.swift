@@ -8,13 +8,11 @@
 import UIKit
 
 extension UIButton {
-    convenience init(
-        title: String,
-        backgroundCollor: UIColor,
-        titleColor: UIColor,
-        cornerRadius: CGFloat,
-        font: UIFont? = .sfPro16(weight: 0.4))
-    {
+    convenience init(title: String,
+                    backgroundCollor: UIColor,
+                    titleColor: UIColor,
+                    cornerRadius: CGFloat,
+                     font: UIFont? = .sfPro16Bold()) {
         
         self.init(type: .system)
         self.setTitle(title, for: .normal)

@@ -13,23 +13,11 @@ class ThemeCollectionViewCell: UICollectionViewCell {
     override var isSelected: Bool {
         didSet {
             updateTheme()
-            bounce(isHighlighted)
         }
     }
 
     override var isHighlighted: Bool {
         didSet { bounce(isHighlighted) }
-    }
-
-    private func bounce(_ bounce: Bool) {
-        UIView.animate(
-            withDuration: 0.8,
-            delay: 0,
-            usingSpringWithDamping: 0.4,
-            initialSpringVelocity: 0.8,
-            options: [.allowUserInteraction, .beginFromCurrentState],
-            animations: { self.transform = bounce ? CGAffineTransform(scaleX: 0.9, y: 0.9) : .identity },
-            completion: nil)
     }
 
     override init(frame: CGRect) {
@@ -45,21 +33,22 @@ class ThemeCollectionViewCell: UICollectionViewCell {
     
     private lazy var mainContainer = UIView()
     
-    var labelTitle: UILabel = {
+    private var labelTitle: UILabel = {
         let label = UILabel()
         label.numberOfLines = 1
-        label.font = .sfPro16(weight: 0.4)
+        label.font = .sfPro16Bold()
         label.textColor = .themeTitleColor
         return label
     }()
     
-    var statusImageView: UIImageView = {
+    private var statusImageView: UIImageView = {
         let image = UIImageView()
+        image.contentMode = .center
         image.image = UIImage(named: "plus")
         return image
     }()
     
-    var devider: UIView = {
+    private var devider: UIView = {
         let view = UIView()
         view.backgroundColor = .deviderColor
         return view
@@ -96,32 +85,25 @@ class ThemeCollectionViewCell: UICollectionViewCell {
             statusImageView.heightAnchor.constraint(equalToConstant: 24)
         ])
 
+        mainContainer.addSubview(devider)
+        devider.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            devider.centerYAnchor.constraint(equalTo: mainContainer.centerYAnchor),
+            devider.rightAnchor.constraint(equalTo: statusImageView.leftAnchor, constant: -8),
+            devider.heightAnchor.constraint(equalTo: statusImageView.heightAnchor),
+            devider.widthAnchor.constraint(equalToConstant: 1)
+
+        ])
+
         mainContainer.addSubview(labelTitle)
         labelTitle.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
             labelTitle.leftAnchor.constraint(equalTo: mainContainer.leftAnchor, constant: 8),
             labelTitle.centerYAnchor.constraint(equalTo: mainContainer.centerYAnchor),
-            labelTitle.rightAnchor.constraint(equalTo: statusImageView.leftAnchor)
+            labelTitle.rightAnchor.constraint(equalTo: devider.leftAnchor, constant: -8)
         ])
-
-
-        
-//        mainContainer.addSubview(devider)
-//        devider.translatesAutoresizingMaskIntoConstraints = false
-//        
-//        NSLayoutConstraint.activate([
-//            devider.leftAnchor.constraint(equalTo: labelTitle.rightAnchor),
-//            devider.rightAnchor.constraint(equalTo: statusImage.leftAnchor),
-//            devider.heightAnchor.constraint(equalTo: statusImage.heightAnchor),
-//            devider.widthAnchor.constraint(equalToConstant: 1)
-//        
-//        ])
-//        
-
-//        
-//        mainContainer.bottomAnchor.constraint(equalTo: labelTitle.bottomAnchor, constant: -10).isActive = true
-        
     }
     
     private func updateTheme() {
@@ -130,6 +112,17 @@ class ThemeCollectionViewCell: UICollectionViewCell {
             self.mainContainer.backgroundColor = self.isSelected ? .themeCellColorIsSelected : .themeCellColor
             self.statusImageView.image = self.isSelected ? UIImage(named: "check") : UIImage(named: "plus")
         }
+    }
+
+    private func bounce(_ bounce: Bool) {
+        UIView.animate(
+            withDuration: 0.8,
+            delay: 0,
+            usingSpringWithDamping: 0.4,
+            initialSpringVelocity: 0.8,
+            options: [.allowUserInteraction, .beginFromCurrentState],
+            animations: { self.transform = bounce ? CGAffineTransform(scaleX: 0.9, y: 0.9) : .identity },
+            completion: nil)
     }
     
     func configure(model: Theme) {

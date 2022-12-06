@@ -13,7 +13,7 @@ final class FavoritesViewController: UIViewController {
     
     private lazy var headerTitle = UILabel(
         name: "Отметьте то, что вам интересно, чтобы настроить Дзен",
-        font: .sfPro16(weight: 0.2)
+        font: .sfPro16Reg()
     )
     private lazy var headerButton: UIButton = {
         let button = UIButton(
