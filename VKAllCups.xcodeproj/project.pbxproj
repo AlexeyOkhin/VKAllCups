@@ -10,13 +10,14 @@
 		0C5C2FBF293B506C001A12B3 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5C2FBE293B506C001A12B3 /* FavoritesViewController.swift */; };
 		0C5C2FC6293B54B6001A12B3 /* UIButton + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5C2FC5293B54B6001A12B3 /* UIButton + Extension.swift */; };
 		0C5C2FC8293B550B001A12B3 /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5C2FC7293B550B001A12B3 /* UIColor + Extension.swift */; };
-		0C5C2FCB293B5898001A12B3 /* UIFavoritesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5C2FCA293B5898001A12B3 /* UIFavoritesCollectionViewController.swift */; };
 		0C5C2FCD293B6450001A12B3 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5C2FCC293B6450001A12B3 /* HeaderView.swift */; };
 		0C5C2FCF293B6576001A12B3 /* UILabel + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5C2FCE293B6576001A12B3 /* UILabel + Extension.swift */; };
 		0C5C2FD1293B65AE001A12B3 /* UIFont + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5C2FD0293B65AE001A12B3 /* UIFont + Extension.swift */; };
 		0C5C2FD7293CC155001A12B3 /* ThemesDzen.json in Resources */ = {isa = PBXBuildFile; fileRef = 0C5C2FD6293CC155001A12B3 /* ThemesDzen.json */; };
 		0C5C2FD9293CC360001A12B3 /* Bundle + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5C2FD8293CC360001A12B3 /* Bundle + Extension.swift */; };
 		0C5C2FDC293CC3B6001A12B3 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5C2FDB293CC3B6001A12B3 /* Theme.swift */; };
+		0C5C2FDF293CE3B6001A12B3 /* ThemeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5C2FDE293CE3B6001A12B3 /* ThemeCollectionViewCell.swift */; };
+		0C5C2FE2293D0AA7001A12B3 /* LeftAlignmentFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5C2FE1293D0AA7001A12B3 /* LeftAlignmentFlowLayout.swift */; };
 		0C74FDE6293B3A2F00F5BAC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C74FDE5293B3A2F00F5BAC5 /* AppDelegate.swift */; };
 		0C74FDEF293B3A3200F5BAC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C74FDEE293B3A3200F5BAC5 /* Assets.xcassets */; };
 		0C74FDF2293B3A3200F5BAC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C74FDF0293B3A3200F5BAC5 /* LaunchScreen.storyboard */; };
@@ -26,13 +27,14 @@
 		0C5C2FBE293B506C001A12B3 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		0C5C2FC5293B54B6001A12B3 /* UIButton + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton + Extension.swift"; sourceTree = "<group>"; };
 		0C5C2FC7293B550B001A12B3 /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
-		0C5C2FCA293B5898001A12B3 /* UIFavoritesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFavoritesCollectionViewController.swift; sourceTree = "<group>"; };
 		0C5C2FCC293B6450001A12B3 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		0C5C2FCE293B6576001A12B3 /* UILabel + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extension.swift"; sourceTree = "<group>"; };
 		0C5C2FD0293B65AE001A12B3 /* UIFont + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + Extension.swift"; sourceTree = "<group>"; };
 		0C5C2FD6293CC155001A12B3 /* ThemesDzen.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ThemesDzen.json; sourceTree = "<group>"; };
 		0C5C2FD8293CC360001A12B3 /* Bundle + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle + Extension.swift"; sourceTree = "<group>"; };
 		0C5C2FDB293CC3B6001A12B3 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		0C5C2FDE293CE3B6001A12B3 /* ThemeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeCollectionViewCell.swift; sourceTree = "<group>"; };
+		0C5C2FE1293D0AA7001A12B3 /* LeftAlignmentFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftAlignmentFlowLayout.swift; sourceTree = "<group>"; };
 		0C74FDE2293B3A2F00F5BAC5 /* VKAllCups.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKAllCups.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C74FDE5293B3A2F00F5BAC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C74FDEE293B3A3200F5BAC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,9 +88,10 @@
 		0C5C2FC3293B538B001A12B3 /* FavoritesThemesModule */ = {
 			isa = PBXGroup;
 			children = (
+				0C5C2FE0293D0A29001A12B3 /* FlowLayout */,
+				0C5C2FDD293CE393001A12B3 /* Cells */,
 				0C5C2FDA293CC39A001A12B3 /* Model */,
 				0C5C2FBE293B506C001A12B3 /* FavoritesViewController.swift */,
-				0C5C2FCA293B5898001A12B3 /* UIFavoritesCollectionViewController.swift */,
 			);
 			path = FavoritesThemesModule;
 			sourceTree = "<group>";
@@ -107,6 +110,22 @@
 				0C5C2FDB293CC3B6001A12B3 /* Theme.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		0C5C2FDD293CE393001A12B3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0C5C2FDE293CE3B6001A12B3 /* ThemeCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		0C5C2FE0293D0A29001A12B3 /* FlowLayout */ = {
+			isa = PBXGroup;
+			children = (
+				0C5C2FE1293D0AA7001A12B3 /* LeftAlignmentFlowLayout.swift */,
+			);
+			path = FlowLayout;
 			sourceTree = "<group>";
 		};
 		0C74FDD9293B3A2E00F5BAC5 = {
@@ -209,11 +228,12 @@
 			files = (
 				0C5C2FD1293B65AE001A12B3 /* UIFont + Extension.swift in Sources */,
 				0C5C2FBF293B506C001A12B3 /* FavoritesViewController.swift in Sources */,
+				0C5C2FE2293D0AA7001A12B3 /* LeftAlignmentFlowLayout.swift in Sources */,
 				0C5C2FCD293B6450001A12B3 /* HeaderView.swift in Sources */,
 				0C5C2FC8293B550B001A12B3 /* UIColor + Extension.swift in Sources */,
+				0C5C2FDF293CE3B6001A12B3 /* ThemeCollectionViewCell.swift in Sources */,
 				0C5C2FCF293B6576001A12B3 /* UILabel + Extension.swift in Sources */,
 				0C5C2FD9293CC360001A12B3 /* Bundle + Extension.swift in Sources */,
-				0C5C2FCB293B5898001A12B3 /* UIFavoritesCollectionViewController.swift in Sources */,
 				0C5C2FDC293CC3B6001A12B3 /* Theme.swift in Sources */,
 				0C74FDE6293B3A2F00F5BAC5 /* AppDelegate.swift in Sources */,
 				0C5C2FC6293B54B6001A12B3 /* UIButton + Extension.swift in Sources */,

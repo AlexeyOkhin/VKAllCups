@@ -29,5 +29,11 @@ extension UIColor {
     static let headerTextColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.45)
     static let headerButtonColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.12)
     static let headerTitleButtonColor = UIColor(rgb: 0xFFFFFF)
+    static let themeTitleColor = UIColor(rgb: 0xFFFFFF)
+    static let themeCellColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.17)
+    static let themeCellColorIsSelected = UIColor(rgb: 0xFF5317)
+    static let deviderColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.27)
+    
+    
 }
 

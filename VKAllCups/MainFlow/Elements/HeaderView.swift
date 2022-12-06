@@ -30,6 +30,8 @@ class HeaderView: UIView {
             button.heightAnchor.constraint(equalToConstant: 40),
             button.widthAnchor.constraint(equalToConstant: 80)
         ])
+        
+        self.heightAnchor.constraint(equalTo: button.heightAnchor).isActive = true
     }
     
     required init?(coder: NSCoder) {
