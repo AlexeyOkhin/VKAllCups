@@ -7,7 +7,8 @@
 
 import UIKit
 
-class HeaderView: UIView {
+final class HeaderView: UIView {
+    
     init(label: UILabel, button: UIButton) {
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false

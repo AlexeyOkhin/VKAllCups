@@ -7,12 +7,17 @@
 
 import UIKit
 
-class ThemeCollectionViewCell: UICollectionViewCell {
+final class ThemeCollectionViewCell: UICollectionViewCell {
     
+    static let idenifire = "\(ThemeCollectionViewCell.self)"
+
+    var didThemeTapped: (() -> Void)?
+
     //MARK: - Переопределяем isSelected чтоб вызывался updateTheme после каждого выделения ячейки
     override var isSelected: Bool {
         didSet {
             updateTheme()
+            didThemeTapped?()
         }
     }
 
@@ -33,7 +38,7 @@ class ThemeCollectionViewCell: UICollectionViewCell {
     
     private lazy var mainContainer = UIView()
     
-    private var labelTitle: UILabel = {
+    private lazy var labelTitle: UILabel = {
         let label = UILabel()
         label.numberOfLines = 1
         label.font = .sfPro16Bold()
@@ -41,14 +46,14 @@ class ThemeCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    private var statusImageView: UIImageView = {
+    private lazy var statusImageView: UIImageView = {
         let image = UIImageView()
         image.contentMode = .center
         image.image = UIImage(named: "plus")
         return image
     }()
     
-    private var devider: UIView = {
+    private lazy var devider: UIView = {
         let view = UIView()
         view.backgroundColor = .deviderColor
         return view

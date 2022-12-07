@@ -8,13 +8,15 @@
 import UIKit
 
 final class FavoritesViewController: UIViewController {
-    
+
     //MARK: - Private properties
-    
+    private var themesDzen = Bundle.main.decode([Theme].self, from: "ThemesDzen.json")
+
     private lazy var headerTitle = UILabel(
         name: "Отметьте то, что вам интересно, чтобы настроить Дзен",
         font: .sfPro16Reg()
     )
+
     private lazy var headerButton: UIButton = {
         let button = UIButton(
             title: "Позже",
@@ -25,32 +27,31 @@ final class FavoritesViewController: UIViewController {
         button.addTarget(self, action: #selector (nextAction), for: .touchUpInside)
         return button
     }()
-   
+
     //MARK: - Создаем CollectionView для множественного выбора обязательно используем allowsMultipleSelection
-    
+
     private lazy var themesCollectionView: UICollectionView = {
         let layout = LeftAlignmentFlowLayout()
         layout.estimatedItemSize = LeftAlignmentFlowLayout.automaticSize
         layout.scrollDirection = .vertical
         layout.minimumInteritemSpacing = 8
+        layout.footerReferenceSize = CGSize(width: 100, height: 100)
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collection.backgroundColor = .clear
-        collection.register(ThemeCollectionViewCell.self, forCellWithReuseIdentifier: "ThemeCell")
+        collection.register(ThemeCollectionViewCell.self, forCellWithReuseIdentifier: ThemeCollectionViewCell.idenifire)
+        collection.register(FooterCollectionView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: FooterCollectionView.identifire)
         collection.translatesAutoresizingMaskIntoConstraints = false
         collection.allowsMultipleSelection = true
+        collection.showsVerticalScrollIndicator = false
         collection.alwaysBounceVertical = true
-        //collection.delegate = self
         collection.dataSource = self
         return collection
     }()
 
-    private let themesDzen = Bundle.main.decode([Theme].self, from: "ThemesDzen.json")
-    private var favoriteThemes = [Theme]()
-
     //MARK: - Privaate Actions
     
     @objc private func nextAction() {
-        //TODO: - Next module
+        //TODO: - Routing
 
     }
     
@@ -60,9 +61,7 @@ final class FavoritesViewController: UIViewController {
         super.viewDidLoad()
         configureAppearance()
         print(themesDzen)
-        
     }
-   
 }
 
     //MARK: - Private methods
@@ -96,7 +95,7 @@ private extension FavoritesViewController {
 extension FavoritesViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return themesDzen.count
+        return themesDzen.count > 15 ? 15 : themesDzen.count
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -104,15 +103,46 @@ extension FavoritesViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: "ThemeCell",
-            for: indexPath) as! ThemeCollectionViewCell
+        // FIXME: - add guard for optional
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ThemeCollectionViewCell.idenifire,
+                                                      for: indexPath) as! ThemeCollectionViewCell
         let theme = themesDzen[indexPath.row]
         cell.configure(model: theme)
-        
+        cell.didThemeTapped = {[weak self] in
+            //TODO: - Logic for mark isFavorite
+            if self?.themesDzen[indexPath.row].isFavorite != nil {
+                self?.themesDzen[indexPath.row].isFavorite?.toggle()
+            } else {
+                self?.themesDzen[indexPath.row].isFavorite = true
+            }
+        }
+
         return cell
     }
 
-}
+    func collectionView(_ collectionView: UICollectionView,
+                        viewForSupplementaryElementOfKind kind: String,
+                        at indexPath: IndexPath) -> UICollectionReusableView {
 
+        guard let headerView = collectionView.dequeueReusableSupplementaryView(
+          ofKind: UICollectionView.elementKindSectionFooter,
+          withReuseIdentifier: FooterCollectionView.identifire,
+          for: indexPath) as? FooterCollectionView
+        else {
+            return collectionView.dequeueReusableSupplementaryView(
+                ofKind: kind,
+                withReuseIdentifier: "\(FooterCollectionView.identifire)",
+                for: indexPath)
+        }
+
+        headerView.didResumeButtonTapped = {
+            //TODO: - add routing
+            print(self.themesDzen.filter({ item in
+                item.isFavorite == true
+            }))
+        }
+
+        return headerView
+    }
+
+}
