@@ -116,6 +116,7 @@ final class ThemeCollectionViewCell: UICollectionViewCell {
         UIView.animate(withDuration: 0.4) {
             self.mainContainer.backgroundColor = self.isSelected ? .themeCellColorIsSelected : .themeCellColor
             self.statusImageView.image = self.isSelected ? UIImage(named: "check") : UIImage(named: "plus")
+            self.devider.isHidden = self.isSelected
         }
     }
 

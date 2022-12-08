@@ -28,8 +28,6 @@ final class FavoritesViewController: UIViewController {
         return button
     }()
 
-    //MARK: - Создаем CollectionView для множественного выбора обязательно используем allowsMultipleSelection
-
     private lazy var themesCollectionView: UICollectionView = {
         let layout = LeftAlignmentFlowLayout()
         layout.estimatedItemSize = LeftAlignmentFlowLayout.automaticSize
@@ -60,7 +58,6 @@ final class FavoritesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureAppearance()
-        print(themesDzen)
     }
 }
 
@@ -103,13 +100,16 @@ extension FavoritesViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        // FIXME: - add guard for optional
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ThemeCollectionViewCell.idenifire,
-                                                      for: indexPath) as! ThemeCollectionViewCell
+
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ThemeCollectionViewCell.idenifire,
+                                                      for: indexPath) as? ThemeCollectionViewCell
+        else {
+            return collectionView.dequeueReusableCell(withReuseIdentifier: ThemeCollectionViewCell.idenifire,for: indexPath)
+        }
         let theme = themesDzen[indexPath.row]
         cell.configure(model: theme)
         cell.didThemeTapped = {[weak self] in
-            //TODO: - Logic for mark isFavorite
+
             if self?.themesDzen[indexPath.row].isFavorite != nil {
                 self?.themesDzen[indexPath.row].isFavorite?.toggle()
             } else {
