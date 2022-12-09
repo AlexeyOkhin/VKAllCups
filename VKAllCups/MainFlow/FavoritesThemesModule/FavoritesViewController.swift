@@ -10,6 +10,7 @@ import UIKit
 final class FavoritesViewController: UIViewController {
 
     //MARK: - Private properties
+    
     private var themesDzen = Bundle.main.decode([Theme].self, from: "ThemesDzen.json")
 
     private lazy var headerTitle = UILabel(
@@ -87,7 +88,7 @@ private extension FavoritesViewController {
     }
 }
 
-//MARK: - Extension for CollectionView
+//MARK: - Extension for UICollectionViewDataSource
 
 extension FavoritesViewController: UICollectionViewDataSource {
     
